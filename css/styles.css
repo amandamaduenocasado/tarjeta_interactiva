@@ -8,7 +8,7 @@
   }
   
   body {
-    background-color: hsl(0, 0%, 100%);
+    background: var(--White);
     margin: 0;
     padding: 0;
     font-family: "Space Grotesk", sans-serif;
@@ -29,7 +29,6 @@
   main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     background-image: url(../assets/images/bg-main-desktop.png);
     background-repeat: no-repeat;
     padding-left: 24px;
@@ -37,16 +36,16 @@
     height: 240px;
   }
 
-  .card-back {
-    position: absolute;
-    width: 286px;
-    height: 157px;
-  }
-
   .card-front {
-    position: absolute;
-    width: 286px;
-    height: 157px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 
+  .card-front, .card-back {
+    max-width: 28rem;
+    height: 15.5rem;
+    padding: 32px;
+    position: relative;
+  }
  
