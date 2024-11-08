@@ -4,15 +4,57 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Fraunces:opsz,wght@9..144,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
-    <title></title>
+    <title>Intercative Card</title>
   </head>
   <body>
-
-  <header>
-  </header>
-
   <main>
+    <div class="name">
+    <label for="user-name" class="user-text-1">CARDHOLDER NAME</label>
+    <input type="user-input-name" name="name" class="user-input-name" id="user-name">
+    </div>
+
+    <section class="card-front">
+      <img src="/assets/images/bg-card-front.png" class="card-front" alt="">
+    <div class="card-number">
+      <span>0000 0000 0000 0000</span>
+    </div>
+    <div class="card-name">
+      <span>JANE APPLESSEED</span>
+      <span>00/00</span>
+    </div>
+
+
+    <section class="card-back">
+      <img src="/assets/images/bg-card-back.png" class="card-back" alt="">
+      <span>000</span>
+    </div>
+
+  
+
+
+    <div class="number">
+      <label for="user-number" class="user-text-2">CARDHOLDER NAME</label>
+      <input type="user-input-number" name="number" class="user-input-number" id="user-number">
+    </div>
+
+    <div class="date">
+      <label for="user-date" class="user-text-3">EXP.DATE (MM/YY</label>
+      <input type="user-input-month" name="month"class="user-input-month" id="user-date-month">
+      <input type="user-input-year" name="year"class="user-input-year" id="user-date-year">
+    </div>
+
+    <div class="cvc">
+      <label for="user-cvc" class="user-text-4">CVC</label>
+      <input type="user-input-cvc" name="cvc" class="user-input-cvc" id="user-cvc">
+    </div>
+
+    <button id="button" class="button">Confirm</button>
+
+
   </main>
   <script src="./js/scripts.js"></script>
   </body>
