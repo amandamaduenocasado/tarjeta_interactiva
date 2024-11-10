@@ -1,51 +1,318 @@
-
 * {
-    box-sizing: border-box;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    background: var(--White);
-    margin: 0;
-    padding: 0;
-    font-family: "Space Grotesk", sans-serif;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+  box-sizing: border-box;
+}
 
-  ul {
-    list-style: none;
-    margin: 0;
-    margin-bottom: 0;
-  
-  }
-  
-  main {
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body {
+  font-family: 'Space Grotesk', 'sans-serif';
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Esta regla elimina los botones de "incremento" y "decremento" que aparecen en algunos navegadores (como Chrome) en los campos de tipo number de un formulario. */
+
+.input-2[type='number']::-webkit-inner-spin-button,
+.input-2[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Esta regla asegura que los campos de tipo number no muestren botones de flechas en Firefox. */
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.main {
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media screen and (width > 768px) {
+  .main {
     display: flex;
-    flex-direction: column;
-    background-image: url(../assets/images/bg-main-desktop.png);
-    background-repeat: no-repeat;
-    padding-left: 24px;
-    width: 100vh;
-    height: 240px;
+    height: 100%;
   }
+}
 
-  .card-front {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
+.cards{
+  width: 100%;
+  height: 240px;
+  background-image: url(/assets/images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 91px;
+}
 
-  .card-front, .card-back {
-    max-width: 28rem;
-    height: 15.5rem;
-    padding: 32px;
-    position: relative;
+@media screen and (width > 768px){
+  .cards{
+      position: absolute;
+      background-image: url(/assets/images/bg-main-desktop.png);
+      background-size: cover;
+      width: 350px;
+      height: 100vh;
   }
- 
+}
+
+
+.image-card-front{
+  background-image: url(/assets/images/bg-card-front.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  z-index: 0;
+  padding-left: 27px;
+  padding-right: 29px;
+  padding-top: 17px;
+  padding-bottom: 30px;
+  color: white;
+  bottom: 37px;
+  left: 50px;
+  width: 285px;
+  height: 156px;
+}
+
+@media screen and (width > 768px){
+  .image-card-front{
+    position: absolute;
+    top: 100px;
+    left: 190px;
+    width: 315px;
+    height: 186px;
+  }
+}
+
+.image-card-back{
+  background-image: url(/assets/images/bg-card-back.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  right: 16px;
+  z-index: 0;
+  color: white;
+  top: 32px;
+  left: 65px;
+  width: 285px;
+  height: 156px;
+  padding-top: 50px;
+  padding-left: 220px;
+}
+
+@media screen and (width > 768px){
+  .image-card-back{
+      top: 320px;
+      left: 290px;
+      width: 305px;
+      height: 185px;
+      padding-top: 55px;
+      padding-left: 230px;
+  }
+}
+
+.card-number-card {
+  font-size: 18px;
+}
+
+@media screen and (width > 768px) {
+  .card-number-card {
+    font-size: 22px;
+  }
+}
+
+
+.card-name-card {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  letter-spacing: 1px;
+  align-items: center;
+}
+
+@media screen and (width > 768px) {
+  .card-number-card {
+    font-size: 22px;
+  }
+  
+}
+
+
+.logo {
+  width: 54px;
+  height: 30px;
+  margin-bottom: 37px
+}
+
+.formulario {
+  margin-inline: auto;
+}
+
+@media screen and (width > 768px) {
+  .formulario {
+    margin-right: 150px;
+    margin-top: 100px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 26px;
+}
+
+.input-1, .input-2, .input-3, .input-4, .input-5 {
+border: 1px solid #610595;
+border-radius: 8px;
+}
+
+.input-1, .input-2 {
+  width: 100%;
+  height: 45px;
+  padding-left: 16px;
+}
+
+/* La pseudo-clase cambia el estilo del borde del campo de entrada (input) cuando este campo recibe el enfoque (es decir, cuando el usuario hace clic dentro del campo o lo selecciona con el teclado). */
+
+
+.form-2 {
+  width: 327px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (width > 768px) {
+  .form-2 {
+    width: 381px;
+  }
+}
+
+.form-date {
+  width: 152px;
+}
+
+@media screen and (width > 768px) {
+  .form-date {
+    width: 170px;
+  }
+}
+
+.date-boxes {
+  margin-top: 9px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (width > 768px) {
+  .date-boxes {
+    width: 170px;
+  }
+}
+
+.input-3,
+.input-4 {
+  width: 72px;
+  height: 45px;
+  padding-left: 16px;
+}
+
+
+@media screen and (width > 768px) {
+  .input-3,
+  .input-4 {
+    width: 80px;
+  }
+}
+
+.cvc-box {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (width > 768px){
+  .cvc-box{
+      width: 191px;
+  }
+}
+
+
+.input-5 {
+  width: 164px;
+  height: 45px;
+  padding-left: 16px;
+}
+
+@media screen and (width > 768px) {
+  .input-5 {
+    width: 191px;
+  }
+}
+
+
+.error {
+  color: red;
+  margin-top: 8px;
+  font-size: 12px;
+  margin-bottom: 0px;
+  width: 100px;
+}
+
+/* Esta clase oculta los mensajes de error cuando no se muestran (usando display: none). */
+
+.errordisplay {
+  display: none;
+}
+
+.title {
+  font-size: 12px;
+  color: #21092f;
+  margin-bottom: 9px;
+}
+
+.text {
+  width: 327px;
+  height: 45px;
+  font-size: 18px;
+  color: #21092f;
+}
+
+.buttonbox {
+  margin-top: 28px;
+}
+
+.button {
+  width: 327px;
+  height: 53px;
+  background-color: #21092f;
+  color: white;
+  border-radius: 8px;
+  font-size: 18px;
+  border: none;
+}
+
+@media screen and (width > 768px) {
+  .button {
+    width: 381px;
+  }
+}
