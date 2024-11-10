@@ -110,10 +110,10 @@ inputNameElement.addEventListener("input", printName);
 /* IMPRESIÓN DEL NUMBER  */
 
 const printNumber = () => {
+  /* Si el número de tarjeta ingresado tiene más de 16 dígitos, se corta a 16 caracteres. Podemos sustituir este if, poniendo en el html maxlength: los caracteres que necesitemos, en este caso 16, y se bloqueará igual
   if (inputNumberElement.value.length > 16) {
     inputNumberElement.value = inputNumberElement.value.substring(0, 16);
-// Si el número de tarjeta ingresado tiene más de 16 dígitos, se corta a 16 caracteres
-  }
+  } */
   if (inputNumberElement.value !== "") {
     cardNumberElement.textContent = inputNumberElement.value;
   } else {
@@ -126,9 +126,6 @@ inputNumberElement.addEventListener("input", printNumber);
 /*IMPRESIÓN DEL MONTH */
 
 const printMonth = () => {
-  if (inputMonthElement.value.length > 2) {
-    inputMonthElement.value = inputMonthElement.value.substring(0, 2);
-  }
   if (inputMonthElement.value !== "") {
     cardMonthElement.textContent = inputMonthElement.value;
   } else {
@@ -140,9 +137,6 @@ inputMonthElement.addEventListener("input", printMonth);
 /* IMPRESIÓN DEL YEAR */
 
 const printYear = () => {
-  if (inputYearElement.value.length > 2) {
-    inputYearElement.value = inputYearElement.value.substring(0, 2);
-  }
   if (inputYearElement.value !== "") {
     cardYearElement.textContent = "/" + inputYearElement.value;
   // Si el campo de año (inputYearElement.value) tiene un valor, se agrega la barra / antes del año y se muestra en la tarjeta.
@@ -155,10 +149,7 @@ inputYearElement.addEventListener("input", printYear);
 
 /*IMPRESIÓN DEL CVC */
 
-const printCvc = () => {
-  if (inputCvcElement.value.length > 3) {
-    inputCvcElement.value = inputCvcElement.value.substring(0, 3);
-  }
+const printCvc = () => { 
   if (inputCvcElement.value !== "") {
     cardCvcElement.textContent = inputCvcElement.value;
   } else {
