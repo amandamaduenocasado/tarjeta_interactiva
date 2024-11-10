@@ -278,7 +278,6 @@ border-radius: 8px;
   width: 100px;
 }
 
-/* Esta clase oculta los mensajes de error cuando no se muestran (usando display: none). */
 
 .errordisplay {
   display: none;

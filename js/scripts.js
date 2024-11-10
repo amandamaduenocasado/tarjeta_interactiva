@@ -42,48 +42,59 @@ const validation = (event) => {
 // RECUERDA: LÍNEA IMPRESCINDIBLE CUANDO REALIZAMOS UN FORMULARIO. DETIENE EL COMPORTAMIENTO PREDETERMINADO DEL FORMULARIO. EN LUGAR DE QUE EL FORMULARIO SE ENVÍE A UN SERVIDOR O RECARGUE LA PÁGINA, ESTA LÍNEA EVITA QUE ESO OCURRA PARA QUE PUEDA HACERSE LA VALIDACIÓN PRIMERO 
     event.preventDefault();
 
-/* NAME */ 
+/* ESTO SE PODRÍA HACER A LA INVERSA 
   if (inputNameElement.value === "") {
-    nameErrorElement.classList.remove("errordisplay"); //Mostrar error
+    nameErrorElement.classList.add("errordisplay"); 
     console.log("campo no validado");
   } else {
-    nameErrorElement.classList.add("errordisplay"); //Ocultar error
+    nameErrorElement.classList.remove("errordisplay"); 
     console.log("campo validado");
   }
+
+EN EL HTML: 
+
+.error {
+  display: none
+}
+
+.errordisplay {
+  display: block 
+}*/
+
+
+/* NAME */ 
+  if (inputNameElement.value === "") {
+    nameErrorElement.classList.remove("errordisplay"); 
+  } else {
+    nameErrorElement.classList.add("errordisplay"); 
+  }
+
 /* NUMBER */
   if (inputNumberElement.value === "") {
     numberErrorElement.classList.remove("errordisplay");
-    console.log("campo no validado");
   } else {
     numberErrorElement.classList.add("errordisplay");
-    console.log("campo validado");
   }
 
 /* MONTH */
   if (inputMonthElement.value === "") {
     monthErrorElement.classList.remove("errordisplay");
-    console.log("campo no validado");
   } else {
     monthErrorElement.classList.add("errordisplay");
-    console.log("campo validado");
   }
 
 /* YEAR */ 
   if (inputYearElement.value === "") {
     yearErrorElement.classList.remove("errordisplay");
-    console.log("campo no validado");
   } else {
     yearErrorElement.classList.add("errordisplay");
-    console.log("campo validado");
   }
 
 /* CVC */
   if (inputCvcElement.value === "") {
     cvcErrorElement.classList.remove("errordisplay");
-    console.log("campo no validado");
   } else {
     cvcErrorElement.classList.add("errordisplay");
-    console.log("campo validado");
   }
 };
 
